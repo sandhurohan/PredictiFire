@@ -1,0 +1,42 @@
+{% extends 'blog/basic.html' %}
+
+{% block body %}
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-md-8 blog-main">
+            <h3 class="pb-4 mb-4 font-italic border-bottom">
+                {{post.title}}
+            </h3>
+
+            <div class="blog-post">
+                <h3 class="blog-post-title">{{post.heading0}}</h3>
+                <p class="blog-post-meta">{{post.pub_date}}  <a href="#">Rohin Sandhu</a></p>
+                <p>{{post.chead0}}</p>
+                <br>
+                <h4>{{post.head1}}</h4>
+                <p>{{post.chead1}}</p>
+                <h4>{{post.head2}}</h4>
+                <p>{{post.chead2}}</p>
+
+
+            </div><!-- /.blog-post -->
+
+        </div><!-- /.blog-main -->
+
+        <aside class="col-md-4 blog-sidebar">
+            <div class="p-4 mb-3 bg-light rounded">
+                <h4 class="font-italic">About</h4>
+                <p class="mb-0"> <i><b>PredictiFire 🔥</b></i><em> started out as a small project and is now</em> the fastest growing RealEstate Predictor of all times in India.</p>
+            </div>
+
+            <div class="p-4 mb-3 bg-light rounded">
+                <h6 class="font-italic">{{post.title}}</h6>
+                <center><img src='/media/{{post.thumbnail}}' height='300' width="300" border="4" alt="{{post.title}}"></center>
+            </div>
+
+        </aside><!-- /.blog-sidebar -->
+
+    </div>
+</div>
+
+{% endblock %}
