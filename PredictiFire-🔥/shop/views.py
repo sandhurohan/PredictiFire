@@ -38,13 +38,13 @@ def tool(request):
 
 #-------------------------------------- ACTUAL-MODEL---------------------------
 # Converting CSV File to DataFrame
-data=pd.read_csv('C:\\Users\sandh\\PycharmProjects\\House-Price-Prediction-System\\PredictiFire-🔥\\Prediction_Model\\predictifire.csv')
+data=pd.read_csv('Prediction_Model/predictifire.csv')
 
 # Differntaiting InDependent(X) variables & Dependent (Y) variable
 X=data.drop('price',axis=1)
 Y=data.price
 
-res=joblib.load('C:\\Users\\sandh\\PycharmProjects\\House-Price-Prediction-System\\PredictiFire-🔥\\Prediction_Model\\predictifire.joblib')
+res=joblib.load('Prediction_Model/predictifire.joblib')
 
 # Making Function to Predict Price
 def predict_price(location,sqft,bath,bhk):
